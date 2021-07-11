@@ -1,97 +1,336 @@
-/* TODO: Set the font size and line height */
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1%;
-  background-color: #13293d;
-  color: #fff;
-}
-
-/* TODO: Change the heading size to 200%, give it a margin all around, and assign font family to serif */
-h1 {
-}
-
-/* TODO: Change the heading size to be slightly smaller than h1, give it a margin only on the top and bottom, and assign font family to serif */
-h2 {
-}
-
-/* TODO: Change header size to be slightly smaller than h2 and assign font family to serif */
-h3 {
-}
-
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  min-width: 300px;
-}
-
-nav a {
-  color: #b9c6ae;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-main {
-  display: flex;
-  flex: 1 1 0;
-  max-width: 1200px;
-  margin: 2% auto;
-}
-
-section {
-  flex: 1 1 0;
-  padding-right: 5%;
-}
-
-article {
-  border-bottom: 1px solid #d8a47f;
-}
-
-/* TODO: Add a margin to the top and bottom of the paragraphs */
-article p {
-}
-
-/* TODO: Add a margin to indent the list, give it square bullet points, and assign font family to monospace */
-article ul {
-}
-
-aside {
-  width: 25%;
-}
-
-input,
-button {
-  width: 100%;
-  margin: 2% 0;
-  padding: 1%;
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  padding: 2%;
-  background-color: #13293d;
-  color: #fff;
-}
-
-@media screen and (max-width: 768px) {
-  header,
-  main {
-    flex-direction: column;
-  }
-
-  section {
-    padding-right: 0;
-  }
-
-  aside {
-    width: 100%;
-    text-align: center;
-  }
-}
+    header {
+        display: flex;
+        background-color: black;
+        justify-content: space-between;
+        padding-right: 60px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+    
+    a:link {
+        color: rgb(176, 176, 148);
+    }
+    
+    a:active {
+        color: rgb(236, 24, 9);
+    }
+    /* When the mouse hovers over nav elements, they light up 'white' */
+    
+    a:hover {
+        color: rgb(187, 223, 190);
+    }
+    
+    .link:link {
+        color: black;
+    }
+    
+    .link:active {
+        color: black;
+    }
+    
+    .link:hover {
+        color: goldenrod;
+    }
+    /* Adding multiple font options to ensure that the priority two, or three fonts are used if the first is not avalable*/
+    
+    h1 h2 {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    /* Adding design elements around the text */
+    
+    .name-box {
+        width: 250px;
+        padding-left: 50px;
+        padding-right: 50px;
+        background-color: rgb(54, 23, 231);
+    }
+    /* To ensure that the navigation menu is in a row*/
+    
+    .nav-bar {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+    }
+    /* Adding horizontal lines under the navigation elements or underlines, increasing its width*/
+    
+    .nav-bar li {
+        padding: 5px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: large;
+        color: rgb(176, 176, 148);
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+        text-decoration-color: rgb(176, 176, 148);
+    }
+    /* The textured background that shows up right under the header. This collapses in the tablet and mobile view */
+    
+    .main-background {
+        background-image: url('../images/image-2.png');
+        background-size: 100vw 500px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 500px;
+        /* width: 100%; */
+    }
+    
+    .main-subtitle {
+        position: absolute;
+        /* bottom: -200px; */
+        left: 1100px;
+        background-color: rgb(31, 12, 202);
+        border: 5px solid black;
+        width: 200px;
+        padding: 5px 5px 5px 50px;
+    }
+    
+    .about-me {
+        display: flex;
+    }
+    
+    .about-me-box {
+        display: flex;
+        padding-left: 100px;
+    }
+    
+    .about {
+        padding-left: 150px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    /* All the articles/works in the journalist's portfolio are stacked vertically. The first section is larger than the rest to meet acceptance criteria */
+    
+    .articles {
+        display: flex;
+        flex-direction: column;
+        padding-left: 150px;
+        width: 100%;
+    }
+    
+    .sub-articles {
+        display: flex;
+        /* flex-direction: grid; */
+        flex-flow: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .sub-articles article {
+        width: 50%;
+    }
+    
+    .work {
+        display: flex;
+        flex-direction: column;
+    }
+    /* The title of each of the articles and their relative positioning */
+    
+    h3 {
+        color: rgb(74, 6, 231);
+        width: 100px;
+        height: 50px;
+        border: 5px solid blue;
+        padding-left: 10px;
+        padding-top: 10px;
+        background-color: black;
+        position: relative;
+        top: 200px;
+    }
+    /* The size of project-1 is larger than the rest of the projects to meet acceptance criteria */
+    
+    .project-1 {
+        height: 300px;
+        background-size: 100vw 300px;
+        margin: 20px 10px 10px 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("../images/image-1.png");
+    }
+    /* When you hover over the images in each project container, their opacity is affected. When you click on the title of the images the user can go to the deployed website. */
+    
+    .project-1:hover {
+        opacity: 0.80;
+        ;
+    }
+    
+    .project-2 {
+        height: 300px;
+        width: 96%;
+        margin: 20px 10px 10px 0;
+        /* margin-right: 2px; */
+        border: 5px solid blue;
+        /* grid-column: 1/2; */
+        background-size: 100vw 300px;
+        /* border: rgb(187, 223, 190); */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("../images/image-3.jpg");
+    }
+    
+    .project-2:hover {
+        opacity: 0.80;
+        ;
+    }
+    
+    .project-3 {
+        height: 300px;
+        width: 96%;
+        margin: 20px 0 10px 10px;
+        border: 5px solid blue;
+        /* grid-column: 1/2; */
+        background-size: 100vw 300px;
+        /* border: rgb(187, 223, 190); */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("../images/image-4.jpg")
+    }
+    
+    .project-3:hover {
+        opacity: 0.80;
+        ;
+    }
+    
+    .project-4 {
+        height: 300px;
+        width: 96%;
+        margin: 10px 10px 10px 0;
+        border: 5px solid blue;
+        /* grid-column: 1/2; */
+        background-size: 100vw 300px;
+        /* border: rgb(187, 223, 190); */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("../images/image-5.jpg")
+    }
+    
+    .project-4:hover {
+        opacity: 0.80;
+        ;
+    }
+    
+    .project-5 {
+        height: 300px;
+        width: 96%;
+        margin: 10px 0 10px 10px;
+        border: 5px solid blue;
+        background-size: 100vw 300px;
+        /* border: rgb(187, 223, 190); */
+        /* grid-column: 1/2; */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("../images/image-6.jpg")
+    }
+    
+    .project-5:hover {
+        opacity: 0.80;
+    }
+    /* Using flexbox to ensure the elements in the footer are spaced aesthetically */
+    
+    footer {
+        display: flex;
+        justify-content: space-between;
+    }
+    /* The vertical line after each section name */
+    
+    .left-bar {
+        border-left: 6px solid black;
+        position: relative;
+        left: 200px;
+    }
+    
+    .footer-menu {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        padding-left: 150px;
+    }
+    /* Making sure the text decoration in the footer elements is such that they change color when hovered upon */
+    
+    .footer-menu li {
+        padding: 5px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: large;
+        color: black;
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+        text-decoration-color: black;
+        padding-right: 120px;
+    }
+    
+    .footer-box {
+        justify-content: space-around;
+    }
+    /* Responsive design for the web application */
+    /* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+    
+    @media (max-width: 1280px) {
+        header {
+            background-color: rgb(116, 240, 15);
+        }
+        nav {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .nav-bar {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .main-background {
+            width: 100%;
+        }
+        .main-subtitle {
+            width: 10px;
+        }
+        header {
+            display: flex;
+            flex-direction: row;
+        }
+        .about {
+            display: block;
+            padding-left: 0px;
+        }
+        .about-me-box {
+            display: flex;
+            flex-direction: row;
+        }
+        .about-me {
+            display: block;
+            padding-left: 0px;
+        }
+        footer {
+            background-color: rgb(38, 17, 226);
+        }
+        .footer-menu {
+            display: flex;
+            flex-direction: column;
+            padding-left: 0px;
+            align-items: center;
+        }
+        .articles {
+            display: block;
+            padding-left: 0px;
+            width: 100%;
+        }
+        .sub-articles article {
+            width: 100%;
+        }
+        /* .project-1 {
+        width: 100%;
+    }
+    .project-2 {
+        width: 100%;
+    }
+    .project-3 {
+        width: 100%;
+    }
+    .project-4 {
+        width: 100%;
+    }
+    .project-5 {
+        width: 100%; */
+    }
