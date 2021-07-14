@@ -14,7 +14,7 @@
     a:active {
         color: rgb(236, 24, 9);
     }
-    /* When the mouse hovers over nav elements, they light up 'white' */
+    /* Hovering on the element shade changes */
     
     a:hover {
         color: rgb(187, 223, 190);
@@ -31,12 +31,12 @@
     .link:hover {
         color: goldenrod;
     }
-    /* Adding multiple font options to ensure that the priority two, or three fonts are used if the first is not avalable*/
+    /* Supporting multiple fonts*/
     
     h1 h2 {
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
-    /* Adding design elements around the text */
+    /* Styling texts */
     
     .name-box {
         width: 250px;
@@ -44,14 +44,14 @@
         padding-right: 50px;
         background-color: rgb(54, 23, 231);
     }
-    /* To ensure that the navigation menu is in a row*/
+    /* Alinging navigation bar*/
     
     .nav-bar {
         list-style-type: none;
         display: flex;
         flex-direction: row;
     }
-    /* Adding horizontal lines under the navigation elements or underlines, increasing its width*/
+    /* Adding lines to the left as per wareframe*/
     
     .nav-bar li {
         padding: 5px;
@@ -70,17 +70,20 @@
         background-position: center;
         background-repeat: no-repeat;
         height: 500px;
-        /* width: 100%; */
     }
     
     .main-subtitle {
         position: absolute;
-        /* bottom: -200px; */
+        top: 500px;
         left: 1100px;
         background-color: rgb(31, 12, 202);
         border: 5px solid black;
-        width: 200px;
-        padding: 5px 5px 5px 50px;
+        width: 120px;
+        padding: 5px 20px 5px 20px;
+        /* padding-right: 50px;
+        padding-left: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px; */
     }
     
     .about-me {
@@ -96,7 +99,7 @@
         padding-left: 150px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
-    /* All the articles/works in the journalist's portfolio are stacked vertically. The first section is larger than the rest to meet acceptance criteria */
+    /*all the projects are using flex display  */
     
     .articles {
         display: flex;
@@ -107,7 +110,6 @@
     
     .sub-articles {
         display: flex;
-        /* flex-direction: grid; */
         flex-flow: wrap;
         justify-content: space-between;
         width: 100%;
@@ -139,6 +141,7 @@
     .project-1 {
         height: 300px;
         background-size: 100vw 300px;
+        border: 5px solid blue;
         margin: 20px 10px 10px 0;
         background-position: center;
         background-repeat: no-repeat;
@@ -260,15 +263,18 @@
     .footer-box {
         justify-content: space-around;
     }
-    /* Responsive design for the web application */
-    /* 
-  ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
-*/
     
-    @media (max-width: 1280px) {
+    @media (min-width: 1025px) and (max-width: 1280px) {
+        /* CSS */
+        .name-box {
+            width: 20%;
+            margin-left: auto;
+            margin-right: auto;
+        }
         header {
-            background-color: rgb(116, 240, 15);
+            background-color: rgb(41, 48, 15);
+            display: flex;
+            flex-direction: column;
         }
         nav {
             display: block;
@@ -281,14 +287,7 @@
             margin-right: auto;
         }
         .main-background {
-            width: 100%;
-        }
-        .main-subtitle {
-            width: 10px;
-        }
-        header {
-            display: flex;
-            flex-direction: row;
+            display: none;
         }
         .about {
             display: block;
@@ -296,14 +295,14 @@
         }
         .about-me-box {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
         }
         .about-me {
             display: block;
             padding-left: 0px;
         }
         footer {
-            background-color: rgb(38, 17, 226);
+            background-color: rgb(44, 1, 163);
         }
         .footer-menu {
             display: flex;
@@ -319,18 +318,211 @@
         .sub-articles article {
             width: 100%;
         }
-        /* .project-1 {
-        width: 100%;
     }
-    .project-2 {
-        width: 100%;
+    /* 
+            ##Device = Tablets, Ipads (portrait)
+            ##Screen = B/w 768px to 1024px
+          */
+    
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .name-box {
+            width: 20%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        header {
+            background-color: rgb(33, 17, 3);
+            display: flex;
+            flex-direction: column;
+        }
+        nav {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .nav-bar {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .main-background {
+            display: none;
+        }
+        .about {
+            display: block;
+            padding-left: 0px;
+        }
+        .about-me-box {
+            display: flex;
+            flex-direction: column;
+        }
+        .about-me {
+            display: block;
+            padding-left: 0px;
+        }
+        footer {
+            background-color: rgb(176, 176, 148);
+        }
+        .footer-menu {
+            display: flex;
+            flex-direction: column;
+            padding-left: 0px;
+            /* align-items: center; */
+        }
+        .articles {
+            display: block;
+            padding-left: 0px;
+            width: 100%;
+        }
+        .sub-articles article {
+            width: 100%;
+        }
     }
-    .project-3 {
-        width: 100%;
+    /* 
+            ##Device = Low Resolution Tablets, Mobiles (Landscape)
+            ##Screen = B/w 481px to 767px
+          */
+    
+    @media (min-width: 481px) and (max-width: 767px) {
+        /* CSS */
+        .name-box {
+            width: 20%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        header {
+            background-color: rgb(67, 4, 67);
+            display: flex;
+            flex-direction: column;
+        }
+        nav {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .nav-bar {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .main-background {
+            display: none;
+        }
+        .about {
+            display: block;
+            padding-left: 0px;
+        }
+        .about-me-box {
+            display: flex;
+            flex-direction: column;
+        }
+        .about-me {
+            display: block;
+            padding-left: 0px;
+        }
+        footer {
+            background-color: rgb(186, 141, 186);
+        }
+        .footer-menu {
+            display: flex;
+            flex-direction: column;
+            padding-left: 0px;
+        }
+        .articles {
+            display: block;
+            padding-left: 0px;
+            width: 100%;
+        }
+        .sub-articles article {
+            width: 100%;
+        }
+        .project-1 {
+            width: 70%;
+        }
+        .project-2 {
+            width: 70%;
+        }
+        .project-3 {
+            width: 70%;
+        }
+        .project-4 {
+            width: 70%;
+        }
+        .project-5 {
+            width: 70%;
+        }
     }
-    .project-4 {
-        width: 100%;
-    }
-    .project-5 {
-        width: 100%; */
+    /* 
+            ##Device = Most of the Smartphones Mobiles (Portrait)
+            ##Screen = B/w 320px to 479px
+          */
+    
+    @media (min-width: 320px) and (max-width: 480px) {
+        .name-box {
+            width: 20%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        header {
+            background-color: rgb(17, 17, 53);
+            display: flex;
+            flex-direction: column;
+        }
+        nav {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .nav-bar {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .main-background {
+            display: none;
+        }
+        .about {
+            display: block;
+            padding-left: 0px;
+        }
+        .about-me-box {
+            display: flex;
+            flex-direction: column;
+        }
+        .about-me {
+            display: block;
+            padding-left: 0px;
+        }
+        footer {
+            background-color: rgb(245, 96, 50);
+        }
+        .footer-menu {
+            display: flex;
+            flex-direction: column;
+            padding-left: 0px;
+            /* align-items: center; */
+        }
+        .articles {
+            display: block;
+            padding-left: 0px;
+            width: 100%;
+        }
+        .sub-articles article {
+            width: 100%;
+        }
+        .project-1 {
+            width: 70%;
+        }
+        .project-2 {
+            width: 70%;
+        }
+        .project-3 {
+            width: 70%;
+        }
+        .project-4 {
+            width: 70%;
+        }
+        .project-5 {
+            width: 70%;
+        }
     }
