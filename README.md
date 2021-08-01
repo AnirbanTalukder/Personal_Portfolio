@@ -1,4 +1,4 @@
-# homework_2
+# Personal_Portfolio
 This repo will be used for second week homework.
 In this homwwork I was asked to create my project portfolio which will showcase my projects I have completed so far. I have used some of my projects in my portfolio. 
 
